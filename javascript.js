@@ -56,5 +56,10 @@
       console.log (lastPosition);
       console.log (ticking);
 
+      console.log("onScroll =>" ,onScroll);
+      console.log ("offset =>" ,offset);
+      console.log ("lastPosition =>" ,lastPosition);
+      console.log ("ticking =>" ,ticking);
+
     });
   })();
