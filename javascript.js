@@ -25,5 +25,11 @@
         });
         ticking = true;
       }
+
+      console.log(onScroll);
+      console.log (offset);
+      console.log (lastPosition);
+      console.log (ticking);
+
     });
   })();
