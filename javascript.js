@@ -9,12 +9,17 @@
     /*--関数 onScroll() を定義
     lastPosition が height（56）　より大きい場合以下の処理
 
-      lastPosition が　offset（0）より大きい(正の値の時？)
-      　真：<header> にhead-animation　を追加　、offset に lastPositionの値を代入
-      　偽：<header>　からhead-animationを削除　、offset に lastPositionの値を代入
+      lastPosition が　offset（0）より大きい(正の値の時？？)
+      　真：<header> にhead-animation　を追加　、offset に lastPositionの値を代入？スクロール量の更新？
+      　偽：<header>　からhead-animationを削除　、offset に lastPositionの値を代入？スクロール量の更新？
     --*/
 
     function onScroll() {
+
+      console.log ("offset =>" ,offset);
+      console.log ("lastPosition =>" ,lastPosition);
+      console.log ("ticking =>" ,ticking);
+
       if (lastPosition > height) {
         if (lastPosition > offset) {
           target.classList.add('head-animation');
@@ -24,7 +29,6 @@
         offset = lastPosition;
       }
     }
-    
     /*--イベント処理を実行
     画面上でスクロールされたとき
 
@@ -39,8 +43,6 @@
 　　　ticking = true　にする
 
     --*/
-　　
-
     window.addEventListener('scroll', function(e) {
       lastPosition = window.scrollY;
       if (!ticking) {
@@ -51,15 +53,16 @@
         ticking = true;
       }
 
+      /*--
       console.log(onScroll);
       console.log (offset);
       console.log (lastPosition);
       console.log (ticking);
-
       console.log("onScroll =>" ,onScroll);
       console.log ("offset =>" ,offset);
       console.log ("lastPosition =>" ,lastPosition);
       console.log ("ticking =>" ,ticking);
+      --*/
 
     });
   })();
