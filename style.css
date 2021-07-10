@@ -1,5 +1,5 @@
-html {
-    box-sizing: border-box;
+ * {
+    box-sizing: inherit;
     font-size:100%;
 }
 
@@ -156,9 +156,9 @@ a {
     width: 100%;
 }
 
-#footer {
-    margin: 0 auto;
-}
+/*--------*/
+/*footer*/
+/*--------*/
 
 #footer p{
     font-size: 0.5rem;
@@ -168,6 +168,41 @@ a {
 }
 
 
+
+/*--------*/
+/*sp*/
+/*--------*/
+@media screen and (max-width: 600px) {
+
+    /*-------------------------------------------
+    Mainvisual
+    -------------------------------------------*/
+    #main-visual img {
+      height: calc(100vh - 60px);
+    }
+  
+    /*-------------------------------------------
+    About
+    -------------------------------------------*/
+    .about-contents {
+      flex-direction: column;
+    }
+    .about-contents img {
+      margin-right: 0;
+    }
+  
+    /*-------------------------------------------
+    Bicycle
+    -------------------------------------------*/
+    .bicycle-item ul {
+      flex-direction: column;
+    }
+    .bicycle-item li {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  
 
 
 
